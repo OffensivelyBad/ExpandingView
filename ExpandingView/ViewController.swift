@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             self.popupState = .hidden
             
             //set the new button title
-            self.showScrollViewButton.titleLabel?.text = "Show Popup"
+            self.showScrollViewButton.setTitle("Show Popup", for: .normal)
         case .hidden:
             //prepare variables for animation
             scale = self.largeScale
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
             self.popupState = .visible
             
             //set the new button title
-            self.showScrollViewButton.titleLabel?.text = "Hide Popup"
+            self.showScrollViewButton.setTitle("Hide Popup", for: .normal)
         }
         
         UIView.animate(withDuration: self.popupDuration, animations: { 
