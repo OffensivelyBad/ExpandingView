@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -95,10 +95,23 @@
                                     <constraint firstItem="o9G-pU-Taq" firstAttribute="width" secondItem="XzZ-Ej-pf2" secondAttribute="width" id="vg4-MG-Fup"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NR-Bc-jqT">
+                                <rect key="frame" x="132" y="80" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="07n-If-wPg"/>
+                                    <constraint firstAttribute="height" constant="30" id="3kw-Ex-s7u"/>
+                                </constraints>
+                                <state key="normal" title="Shrink"/>
+                                <connections>
+                                    <action selector="toggleAnimationMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eSx-tN-bla"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yhM-PI-Sam" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="58N-cF-udL"/>
+                            <constraint firstItem="4NR-Bc-jqT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="8bJ-47-bmM"/>
+                            <constraint firstItem="4NR-Bc-jqT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hjt-gQ-35Y"/>
                             <constraint firstItem="XzZ-Ej-pf2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I4I-AG-prk"/>
                             <constraint firstItem="XzZ-Ej-pf2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O99-GP-KZ4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yhM-PI-Sam" secondAttribute="bottom" constant="60" id="x6D-sn-QiV"/>
@@ -107,6 +120,7 @@
                     <connections>
                         <outlet property="popupView" destination="XzZ-Ej-pf2" id="Tu6-Zd-jmC"/>
                         <outlet property="showScrollViewButton" destination="yhM-PI-Sam" id="HxY-8r-Rf7"/>
+                        <outlet property="zipButton" destination="4NR-Bc-jqT" id="871-ey-OMd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
